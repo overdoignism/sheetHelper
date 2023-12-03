@@ -6,7 +6,7 @@ Assume the target URL is _ht<span>tp://www<span>.somestock<span>.com/stock1001/_
 
 Assume the XPath is _/html/body/main/div/div\[3\]/span\[1\]_ .
 
-**How to get XPath: https://www.youtube.com/watch?v=mNpqZoZArt0**
+**( How to get XPath: https://www.youtube.com/watch?v=mNpqZoZArt0 )**
 
 ### Step 2: Register a free website that supports PHP.
 
