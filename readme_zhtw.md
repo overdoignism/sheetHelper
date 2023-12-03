@@ -2,13 +2,15 @@
 
 ### 第一步 準備好你要截取的網址、XPath。
 
-這裡假定目標網址為 _http://www.somestock.com/stock1001/_ 。
+這裡假定目標網址為 _ht<span>tp://www<span>.somestock<span>.com/stock1001/_ 。
 
 這裡假定 XPath 為 _/html/body/main/div/div\[3\]/span\[1\]_ 。
 
+**( 如何取得 XPath 教學: https://www.youtube.com/watch?v=mNpqZoZArt0 )**
+
 ### 第二步 申請一個支援 PHP 的免費網站。
 
-這裡假定網址為 _http://whoAmI.freehost.com/_ 。
+這裡假定網址為 _ht<span>tp://whoAmI<span>.freehost<span>.com/_ 。
 
 ### 第三步 下載本程式。其中的 PHP 檔案最好改名一下，並且保密。
 
@@ -30,7 +32,7 @@ _SH\_Read.php -> Help\_R.php_
 
 如果套用上面的範例即為：
 
-_http://www.somestock.com/stock1001/_  
+_ht<span>tp://www<span>.somestock<span>.com/stock1001/_  
 _/html/body/main/div/div\[3\]/span\[1\]_  
 _Example\_1_  
 _0_
@@ -39,14 +41,14 @@ _0_
 
 這裡假定為 _Run.BAT_ 。其內容如下：
 
-_sheetHelper.exe Sample1.TXT http://whoAmI.freehost.com/Help_W.php_  
+_sheetHelper.exe Sample1.TXT ht<span>tp://whoAmI.freehost.com/Help_W.php_  
 _timeout /t 10_
 
 如果你要一次處理多個目標，那就是增加多行，像這樣：
 
-_sheetHelper.exe Sample1.TXT http://whoAmI.freehost.com/Help_W.php_  
-_sheetHelper.exe Sample2.TXT http://whoAmI.freehost.com/Help_W.php_  
-_sheetHelper.exe Sample3.TXT http://whoAmI.freehost.com/Help_W.php_  
+_sheetHelper.exe Sample1.TXT ht<span>tp://whoAmI<span>.freehost<span>.com/Help_W.php_  
+_sheetHelper.exe Sample2.TXT ht<span>tp://whoAmI<span>.freehost<span>.com/Help_W.php_  
+_sheetHelper.exe Sample3.TXT ht<span>tp://whoAmI<span>.freehost<span>.com/Help_W.php_  
 _timeout /t 10_
 
 然後執行。如果執行時說需要安裝 webview2 執行元件，可至此處下載：  
@@ -54,13 +56,13 @@ https://developer.microsoft.com/zh-tw/microsoft-edge/webview2/
 
 ### 第七步  到 Google Sheets 設置第一個欄位。
 
-_\=IMPORTXML("http://whoAmI.freehost.com/Help_R.php?id=Example_1","//span[@class='Example_1']")_
+_\=IMPORTXML("ht<span>tp://whoAmI<span>.freehost<span>.com/Help_R.php?id=Example_1","//span[@class='Example_1']")_
 
 這樣顯示的就是讀值了。
 
 ### 第八步  如果你需要停擺時的警示，請設置第二個欄位：
 
-_\=IMPORTXML("http://whoAmI.freehost.com/Help_R.php?id=Example_1","//span[@class='Example_1_sec']")_
+_\=IMPORTXML("ht<span>tp://whoAmI<span>.freehost<span>.com/Help_R.php?id=Example_1","//span[@class='Example_1_sec']")_
 
 這樣會讀回距離上次更新有多少秒。你可以自行加入運算，除 3600 就成為小時。
 
@@ -72,7 +74,7 @@ _\=IMPORTXML("http://whoAmI.freehost.com/Help_R.php?id=Example_1","//span[@class
 
 ### 進階使用方式：
 
-一、如果你有多個截取目標，可以設置成 Help\_R.php?id=Example\_1,Example\_2,Example\_3，Google Sheets 應該可以節省一些讀取次數，節省免費網站的流量。
+一、如果你有多個截取目標，可以設置成 ...Help\_R.php?id=Example\_1,Example\_2,Example\_3，Google Sheets 應該可以節省一些讀取次數，節省免費網站的流量。
 
 二、停擺警示欄位，可以設定「條件式格式設定」，在超過時間時顯示為指定的顏色。
 
