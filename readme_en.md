@@ -2,13 +2,15 @@
 
 ### Step 1: Prepare the URL and XPath you want to capture.
 
-Assume the target URL is _http://www.somestock.com/stock1001/_ .
+Assume the target URL is _ht<span>tp://www<span>.somestock<span>.com/stock1001/_ .
 
 Assume the XPath is _/html/body/main/div/div\[3\]/span\[1\]_ .
 
+**How to get XPath: https://www.youtube.com/watch?v=mNpqZoZArt0**
+
 ### Step 2: Register a free website that supports PHP.
 
-Assume the website is _http://whoAmI.freehost.com/_ .
+Assume the website is _ht<span>tp://whoAmI<span>.freehost<span>.com/_ .
 
 ### Step 3: Download this program. Rename the PHP files for security (Don't tell anyone):
 
@@ -32,7 +34,7 @@ Line 4: Data mode, 0=text, 1=number
   
 Example:
 
-_http://www.somestock.com/stock1001/_  
+_ht<span>tp://www<span>.somestock<span>.com/stock1001/_  
 _/html/body/main/div/div\[3\]/span\[1\]_  
 _Example\_1_  
 _0_
@@ -43,14 +45,14 @@ e.g., _Run.BAT_.
 
 **Its content is as follows:**
 
-_sheetHelper.exe Sample1.TXT http://whoAmI.freehost.com/Help_W.php_  
+_sheetHelper.exe Sample1.TXT ht<span>tp://whoAmI<span>.freehost<span>.com/Help_W.php_  
 _timeout /t 10_
 
 **For multiple targets:**
 
-_sheetHelper.exe Sample1.TXT http://whoAmI.freehost.com/Help_W.php_  
-_sheetHelper.exe Sample2.TXT http://whoAmI.freehost.com/Help_W.php_  
-_sheetHelper.exe Sample3.TXT http://whoAmI.freehost.com/Help_W.php_  
+_sheetHelper.exe Sample1.TXT ht<span>tp://whoAmI<span>.freehost<span>.com/Help_W.php_  
+_sheetHelper.exe Sample2.TXT ht<span>tp://whoAmI<span>.freehost<span>.com/Help_W.php_  
+_sheetHelper.exe Sample3.TXT ht<span>tp://whoAmI<span>.freehost<span>.com/Help_W.php_  
 _timeout /t 10_
 
 Run the batch file. If it prompts to install the WebView2 runtime component, download it from:  
@@ -58,12 +60,12 @@ https://developer.microsoft.com/zh-tw/microsoft-edge/webview2/
 
 ### Step 7: Set up the first column in Google Sheets:
 
-_\=IMPORTXML("http://whoAmI.freehost.com/Help_R.php?id=Example_1","//span[@class='Example_1']")_  
+_\=IMPORTXML("ht<span>tp://whoAmI<span>.freehost<span>.com/Help_R.php?id=Example_1","//span[@class='Example_1']")_  
 This displays the captured value.
 
 ### Step 8: If you need an alert when it stops, set up the second column:
 
-_\=IMPORTXML("http://whoAmI.freehost.com/Help_R.php?id=Example_1","//span[@class='Example_1_sec']")_  
+_\=IMPORTXML("ht<span>tp://whoAmI.freehost.com/Help_R.php?id=Example_1","//span[@class='Example_1_sec']")_  
 This shows the seconds since the last update. You can perform calculations, e.g., divide by 3600 for hours.
 
 ### Step 9: After confirming everything works, use the Task Scheduler to execute Run.BAT based on your desired conditions.
