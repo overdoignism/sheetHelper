@@ -78,7 +78,11 @@ If you have multiple capture targets, set them as …Help\_R.php?id=Example\_1,E
 
 For the stop working alert column, use "Conditional Formatting" to display a specific color when exceeding a certain time.
 
-If data mode is set to 0 (text), it uploads any information. If set to 1 (number), it only uploads when detecting as an number (excluding % symbol) to enhance field change detection.
+If data mode is set to 0 (text), it uploads any information.  
+If set to 1 (number), it only uploads when detecting as an number (excluding % symbol) to enhance field change detection.
+
+For batch file or powershell, the errorlevels mean:  
+0=success  1=runtime error  2=Settings error 3=Target connect error  4=Target value error  5=Host connect error
 
 ### Final Reminders:
 
