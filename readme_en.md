@@ -1,3 +1,7 @@
+## Operation Principle
+
+Using WebView2 (=Edge=Chromium) as the core component, it emulates real web browsing, captures content based on XPath, and then uploads the information to an external PHP website for retrieval by Google Sheets or other programs.
+
 ## How to use
 
 ### Step 1: Prepare the URL and XPath you want to capture.
@@ -68,26 +72,27 @@ This displays the captured value.
 _\=IMPORTXML("ht<span>tp://whoAmI.freehost.com/Help_R.php?id=Example_1","//span[@class='Example_1_sec']")_  
 This shows the seconds since the last update. You can perform calculations, e.g., divide by 3600 for hours.
 
-### Step 9: After confirming everything works, use the Task Scheduler to execute Run.BAT based on your desired conditions.
+### Step 9: Task Scheduler 
+After confirming everything works, use the Task Scheduler to execute Run.BAT based on your desired conditions.
 
 ### Step 10: Congratulations! You're done.
 
 ### Advanced Usage:
 
-If you have multiple capture targets, set them as …Help\_R.php?id=Example\_1,Example\_2,Example\_3 to save on read operations.
+1. If you have multiple capture targets, set them as …Help\_R.php?id=Example\_1,Example\_2,Example\_3 to save on read traffic.
 
-For the stop working alert column, use "Conditional Formatting" to display a specific color when exceeding a certain time.
+2. For the stop working alert column, use "Conditional Formatting" to display a specific style when exceeding a certain time.
 
-If data mode is set to 0 (text), it uploads any information.  
+3. If data mode is set to 0 (text), it uploads any information.  
 If set to 1 (number), it only uploads when detecting as an number (excluding % symbol) to enhance field change detection.
 
-For batch file or powershell, the errorlevels mean:  
-0=success  1=runtime error  2=Settings error 3=Target connect error  4=Target value error  5=Host connect error
+4. For batch file or powershell, the errorlevels mean:  
+0=success / 1=runtime error / 2=Settings error / 3=Target connect error / 4=Target value error / 5=Host connect error
 
 ### Final Reminders:
 
-Google Sheets update frequency is limited (approximately once per hour). Adjust the program's start time accordingly. Set a longer update time to avoid unnecessary traffic waste.
+1. Google Sheets update frequency is limited (approximately once per hour). Adjust the program's start time accordingly. Set a longer update time to avoid unnecessary traffic waste.
 
-The program may work with Microsoft Excel 2013 and later versions, but testing is required.
+2. The program may work with Microsoft Excel 2013 and later versions, but testing is required.
 
-The program generates a browsing cache folder in the same directory. You may delete it when the program is not running, but keeping it can speed up webpage loading.
+3. The program generates a browsing cache folder in the same directory. You may delete it when the program is not running, but keeping it can speed up webpage loading.
