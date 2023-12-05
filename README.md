@@ -11,7 +11,7 @@ Host: Website with PHP 6 or higher
 
 ## History 歷史版本
 Current is v0.1
-https://github.com/overdoignism/sheetHelper/blob/main/History.md
+https://github.com/overdoignism/sheetHelper/blob/main/History.md  
 EXE SHA256: ABC0972ACE5F1204AB0F8F7571438A478712ACBF7839A0252A287330DC6EE25E
 
 ## English How to:
@@ -21,8 +21,8 @@ https://github.com/overdoignism/sheetHelper/blob/main/readme_en.md
 https://github.com/overdoignism/sheetHelper/blob/main/readme_zhtw.md
 
 ## Remark 備註
-There is so many files for source code, so released with zip.
+There is so many files for source code, so released with zip.  
 Use webview2 1.0.2151.40.
 
-Windows EXE 原始程式碼檔案太多，故以壓縮檔方式釋出。
+Windows EXE 原始程式碼檔案太多，故以壓縮檔方式釋出。  
 使用 webview2 1.0.2151.40.
